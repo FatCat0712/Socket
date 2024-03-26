@@ -1,0 +1,43 @@
+* Basic Stream Operation:
+
++ Open Stream
++ Close Stream
++ Read 
++ Write
++ Seek
+
+Three main types of stream
+
++ InputStream ( đọc dữ liệu )
++ OutputStream	( ghi dữ liệu)
++ FilterStream (lọc)
+
+* Đọc dữ liệu
+
+_ Open InputStream
+
+While ( more information){
+	read information
+	process information
+}
+
+Close InputStream
+
+* Ghi dữ liệu
+
+_ Open OuputStream
+
+while ( more information){
+	get information from
+	write information
+}
+close OuputStream
+
+* 2 main types of data
+
++ Byte
++ Character
+
+* Note 
+   Text (characters)
+	-> charset
