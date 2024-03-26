@@ -1,0 +1,6 @@
+Trong Java 
+
+Stream là một đối tượng vận chuyển dữ liệu từ nguồn cho đến đích
+
++ InputStream
++ OuputStream
