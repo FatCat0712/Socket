@@ -1,0 +1,41 @@
+* Nên ghi log trong những trường hợp sau
+
++ Debug
+
++ Info
+
++ Warning
+
++ Error
+
+Lưu ý:
+
++ Định dạng: dễ đọc và phải hiểu được
+
++ Thông tin có ích: giúp xác định được sự kiện cụ thể
+
++ Không ghi quá nhiều
+
++ Xử lý ngoại lệ : printStackTrace -> debug
+
++ Hiệu suất hoạt động 
+
++ Xử lý log
+
+Thư viện ghi log
+
++ org.apache.logging.log4j
+
+Format: Time (yyyy - mm - dd HH:mm:ss)
+
+logger.erro("")
+
+
+
+
+
+
+
+
+
+
