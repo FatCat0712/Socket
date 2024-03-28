@@ -1,0 +1,19 @@
+Write text to File
+
+String path = "";
+FileWriter writer = new FileWriter(path);
+writer.write("");
+writer.close();
+
+
+Read text from file
+
+String path = "";
+FileReader reader = new FileReader(path);
+BufferedReader br = new BufferedReader(reader);
+String line;
+String content = "";
+while((line = br.readline())!=null){
+	content += line + "\n";
+}
+
