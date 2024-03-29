@@ -1,0 +1,55 @@
+* Multithreading : là một tiến trình thực hiện nhiều luồng đồng thời. Một ứng dụng Java ngoài luồng chính có thể có các luồng thực thi đồng thời làm ứng dụng chạy nhanh và hiệu quả hơn.
+
+* Ví dụ : trình duyệt hay các chương trình nghe nhạc là một ví dụ về đa luồng
+
++ Khi duyệt 1 trang web, có rất nhiều hình ảnh , CSS, Javascript, ... được tải đồng thời ở các luồng khác nhau
+
++ Khi play nạc, chúng ta vẫn có thể tương tác được với các nút điều khiển như: Play, Pause , next, back ... vì luồng phát nhạc riêng biệt với luồng tiếp nhận tương tác
+
+* Sử dụng đa luồng trong Java
+
+_ Java 
+
+	+ Thread (Class): chúng ta có thể kế thừa (extends)
+
+	+ Runnable (Interface): hiện thực lại (implements)
+
+* Đa nhiệm ( Multitasking): là khả năng chạy đồng thời một hoặc nhiều chương trình cùng một lúc trên một hệ điều hành. Hệ điều hành quản lý việc này và sắp xếp lịch phù hợp cho các chương trình đó. Ví dụ trên hệ điều hành Windows chúng ta có thể làm việc đồng thời với các chương trình khác nhau: Microsoft Word, Excel, Media Player,..
+
+* Có thể sử dụng đa nhiệm để tận dụng tính năng của CPU
+
+_  Đa nhiệm dựa trên đơn tiến trình (Process) - Đa tiến trình (Multiprocessing)
+
++ Mỗi tiến trình có địa chỉ riêng trong bộ nhớ, tức là mỗi tiến trình phân bổ vùng nhớ riêng biệt.
+
++ Tiến trình là nặng.
+
++ Sự giao tiếp giữa cá tiến trình có chi phí cao
+
++ Chuyển đổi từ tiến trình này sang tiến trình khách đòi hỏi thời gian để đăng ký việc lưu và tải các bản đồ bộ nhớ, các danh sách cập nhật,...
+
+_ Đa nhiệm dựa trên luồng (Thread) - Đa luồng (MultiThreading)
+
++ Các luồng chia sẻ không gian địa chỉ ô nhớ giống nhau
+
++ Luồng là nhẹ
+
++ Sự giao tiếp giữa các luồng có chi phí thấp.
+
+* Ưu điểm của đa luồng:
+
++ Nó không chặn người dùng sử dụng vì các luồng là độc lập và bạn có thể thực hiện nhiều công việc cùng một lúc.
+
++ Mỗi luồng có thể dùng chung và chia sẻ nguồn tài nguyên trong quá trình chạy, nhưng có thể thực hiện một cách độc lập.
+
++ Luồng là độc lập vì vậy nó không ảnh hưởng đến luồng khác nếu ngoại lệ xảy ra trong một luồng duy nhất.
+
++ Có thể thực hiện nhiều hoạt động với nhau để tiết kiệm thời gian. Ví dụ một ứng dụng có thể được tách thành: luồng chính chạy giao diện người dùng và các luồng phụ nhiệm gửi kết quả đến luồng chính
+
+* Nhược điểm của đa luồng :
+
++ Càng nhiều luồng xử lý càng phức tạp
+
++ Xử lý vấn đề về tranh chấp bộ nhớ, đồng bộ dữ liệu khá phức tạp
+
++ Càn phát hiện tránh các luồng chết (dead lock), luồng chạy mà không làm gì trong ứng dụng cả
