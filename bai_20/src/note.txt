@@ -1,0 +1,1 @@
+Đồng bộ: tại một thời điểm, chỉ có 1 thread được tương tác với giá trị dùng chung
