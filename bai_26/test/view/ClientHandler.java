@@ -50,7 +50,7 @@ public class ClientHandler implements Runnable{
             }
                 
         } catch (IOException ex) {
-            Logger.getLogger(ClientHandler.class.getName()).log(Level.SEVERE, null, ex);
+            removeClient();
         }
         
     }
@@ -75,7 +75,7 @@ public class ClientHandler implements Runnable{
     
     public void removeClient(){
         clients.remove(this);
-        broadCast(this.username,username+" has left");
+        broadCast(username,username+" has left the chat");
         
     }
     
