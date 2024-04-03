@@ -1,0 +1,59 @@
+* UDP hoạt động như thế nào ?
+
+Giao thức UDP hoạt động tương tự như TCO, nhưng nó bỏ qua quá trình kiểm tra lỗi. Khi một ứng dụng sử dụng giao thức UDP, các gói tin được gửi cho bên nhận và bên gửi không phải chờ để đảm bảo bên nhận đã được nhận gói tin, do đó nó lại tiếp tục gửi gói tin tiếp theo. Nếu bên nhận bỏ lỡ một vài gói UDP, họ sẽ mất vì bên gửi không gửi lại chúng. Do đó thiết bị có thể giao tiếp nhanh hơn.
+
+* Packet
+
+là một dãy số nhị phân, biểu diễn cho dữ liệu, tín hiệu điều khiển, được chuyển đến các host. Thông tin được sắp xếp theo một khuôn dạng cụ thể
+
+* Datagram
+
+là một gói tin độc lập, tự chứa, mang đầy đủ dữ liệu từ nguồn đến đích
+
+* MTU (Maximum transmission unit)
+
+Mô tả số byte dữ liệu tối đa có thể truyền trong một gói tin
+
+
+* Port: cổng, để ánh xạ dữ liệu đến một tiến trình cụ thể 
+
+(0 -> 65535)
+
+* TTL : Time to live , thiết lập một giới hạn trên các router mà một datagram có thể đi qua.
+
+* Multicasting : truyền tin theo kiểu 1 - nhiều
+
+* Broadcasting : truyền tin theo kiểu 1 - tất cả
+
+* Ưu điểm của UDP
+
++ Giao thức phi liên kết
+
++ Tốc độ nhanh hơn
+
+* Nhược điểm của UDP
+
++ Thiếu các thao tác bắt tay
+
++ Không hỗ trợ session
+
++ Độ tin cậy thấp hơn
+
++ Bảo mật thấp
+
++ UDP không có kiểm soát luồng
+
+* Khi nào nên sử dụng UDP
+
+_ Broadcasting / Multicasting
+
+_ Kích thước datagram nhỏ, thứ tự không quan trọng
+
+_ Không cần thiết lập liên kết
+
+_ Không truyền lại gói tin
+
+_ Ưu tiên về băng thông
+
+
+
