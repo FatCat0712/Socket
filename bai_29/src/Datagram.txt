@@ -1,0 +1,12 @@
+
+DatagramSocket : cho phép chúng ta tạo và quản lý các kết nối qua giao thức UDP
+
+
+DatagramPacket : 
+	+ đây là lớp đóng gói dữ liệu hoặc là nơi lưu trữ dữ liệu 
+	+ cho phép gửi và nhận các gói tin dữ liệu độc lập
+	+ Không yêu cầu kết nối liên tục
+
+
+
+
